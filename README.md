@@ -1,2 +1,2 @@
 # UMLet-palettes
-You need to put those under /palettes
+You need to put the palette files under /palettes
