@@ -1,2 +1,2 @@
-# UMLet-paletes
-UMLet paletes
+# UMLet-palettes
+You need to put those under /palettes
