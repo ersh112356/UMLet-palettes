@@ -388,7 +388,7 @@ bg=light_gray</panel_attributes>
     </coordinates>
     <panel_attributes>REST
 fontsize=12
-bg=dark_gray</panel_attributes>
+bg=gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
