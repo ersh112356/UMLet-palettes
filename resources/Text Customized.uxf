@@ -910,7 +910,7 @@ fontsize=10
 fontsize=17
 halign=center
 She's
-bg=#009900
+bg=#999900
 </panel_attributes>
     <additional_attributes/>
     <custom_code>//Modify the code below to define the element's behavior.
