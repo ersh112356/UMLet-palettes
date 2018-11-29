@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>121</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>// The name of the image file.
+// The needs to be palced relative to the diagram.
+// Parent forder needs to be avoided, as it's 
+// should be the same as the diagram itself.
+image=umlet_logo.png
+// If avoided, or frame=false, the frame os removed.
+frame=true</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+try
+{
+    for(String textline : textlines)
+    {
+        if(textline.startsWith("image="))
+        {
+        	  String path = new java.io.File(com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFileHandler().getFullPathName()).getParent();
+           String name = textline.substring("image=".length(),textline.length());
+           java.awt.image.BufferedImage image = javax.imageio.ImageIO.read(new java.io.File(path+java.io.File.separatorChar+name));
+           g2.drawImage(image,0,0,width,height,null);
+           
+           continue;
+        }
+        else if(textline.startsWith("frame=true"))
+        {
+            drawRectangle(0,0,width,height);
+            
+            continue;
+        }
+    }
+}
+catch(Exception e)
+{
+}</custom_code>
+  </element>
+</diagram>
