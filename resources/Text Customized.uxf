@@ -100,8 +100,8 @@ for(String textline : textlines)
 
 halign=left
 fontsize=24
-bg=#9999ff
-</panel_attributes>
+
+bg=light_gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -665,7 +665,7 @@ catch(Exception e)
     <coordinates>
       <x>20</x>
       <y>730</y>
-      <w>461</w>
+      <w>371</w>
       <h>121</h>
     </coordinates>
     <panel_attributes>// Changing the font size is at the sentence level.
