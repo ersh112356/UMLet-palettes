@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>120</x>
+      <y>510</y>
+      <w>31</w>
+      <h>211</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+Hello, World!
+bg=#ffcc00
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y = textHeight();
+drawRectangle(0,0,width,height);
+
+for(String textline : textlines)
+{
+    for(int i=0;i&lt;textline.length();i++)
+    {
+        char c = textline.charAt(i);
+        y += printLeft(c+"",y)*0.9; 
+    }
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>20</x>
+      <y>510</y>
+      <w>31</w>
+      <h>211</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+Hello, World!
+bg=#ff6600</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y = textHeight();
+drawRectangle(0,0,width,height);
+
+for(String textline : textlines)
+{
+    for(int i=0;i&lt;textline.length();i++)
+    {
+        char c = textline.charAt(i);
+        y += printCenter(c+"",y)*0.9; 
+    }
+}</custom_code>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>0</y>
+      <w>540</w>
+      <h>490</h>
+    </coordinates>
+    <panel_attributes>&#128896;&#128897;&#128898;&#128899;&#128314;&#128315;&#128316;&#128317; ⯅⯆⯇⯈
+⬅⬆⬇⬈⬉⬊⬋⬌
+⟷⟸⟹⟺⟻⟼
+⟽⟾⟿➘➙➚➛➜➝➞➟➠➡
+↠ ↡ ↢ ↣ ↤ ↥ ↦ ↧ ↨ ↩ ↪ ↫ ↬ ↭ ↮ ↯ 
+➤➥➦➧➨ ⇐ ⇑ ⇒ ⇓ ⇔ ⇕ ⇖ ⇗ ⇘ ⇙ ⇚ ⇛ ⇜ ⇝ ⇞ ⇟
+⇰ ⇱ ⇲ ⇳ ⇴ ⇵ ⇶ ⇷ ⇸ ⇹ ⇺ ⇻ ⇼ ⇽ ⇾ ⇿
+➤➥➦➧➨
+↼↽↾↿⇀⇁⇂⇃⇄⇅⇆⇇⇈⇉⇊
+⇋⇌⇍⇎⇏⇐⇑⇒⇓⇔⇕⇖⇗⇘⇙ ⇛
+⇚⇛⇜⇝
+⏰⌚⌛⏳⌦⏩⏪⏫⏬☀⌕⌘☎☏⚑⚐⚠⚫⚪⛌⛶✅✓✔⌇〈〉✉
+← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟
+↠ ↡ ↢ ↣ ↤ ↥ ↦ ↧ ↨ ↩ ↪ ↫ ↬ ↭ ↮ ↯
+↰ ↱ ↲ ↳ ↴ ↵ ↶ ↷ ↸ ↹ ↺ ↻ ↼ ↽ ↾ ↿
+⇀ ⇁ ⇂ ⇃ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌ ⇍ ⇎ ⇏
+⇐ ⇑ ⇒ ⇓ ⇔ ⇕ ⇖ ⇗ ⇘ ⇙ ⇚ ⇛ ⇜ ⇝ ⇞ ⇟
+⇠ ⇡ ⇢ ⇣ ⇤ ⇥ ⇦ ⇧ ⇨ ⇩ ⇪ ⇫ ⇬ ⇭ ⇮ ⇯
+⇰ ⇱ ⇲ ⇳ ⇴ ⇵ ⇶ ⇷ ⇸ ⇹ ⇺ ⇻ ⇼ ⇽ ⇾ ⇿
+
+halign=left
+fontsize=24
+bg=#9999ff
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>220</x>
+      <y>510</y>
+      <w>21</w>
+      <h>211</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+Hello, World!
+
+
+fg=#009900</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y = textHeight();
+
+for(String textline : textlines)
+{
+    for(int i=0;i&lt;textline.length();i++)
+    {
+        char c = textline.charAt(i);
+        y += printCenter(c+"",y)*0.9; 
+    }
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>170</x>
+      <y>510</y>
+      <w>31</w>
+      <h>211</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+/*Hello, World!*/
+bg=#ffcc00
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y = textHeight();
+drawRectangle(0,0,width,height);
+
+for(String textline : textlines)
+{        
+  String substring = textline;
+  boolean bflag = false;
+  boolean iflag = false;
+  
+  if(substring.startsWith("/") &amp;&amp; substring.endsWith("/"))
+  {
+  	 substring = substring.substring(1,substring.length()-1);
+     iflag = true;
+  }
+          
+  if(substring.startsWith("*") &amp;&amp; substring.endsWith("*"))
+  {
+  	 substring = substring.substring(1,substring.length()-1);
+     bflag = true;
+  }
+    
+  if(substring.startsWith("/") &amp;&amp; substring.endsWith("/"))
+  {
+  	 substring = substring.substring(1,substring.length()-1);
+     iflag = true;
+  }
+          
+  for(int i=0;i&lt;substring.length();i++)
+  {
+  	 char c = substring.charAt(i);
+     String letter = bflag ? "*"+c+"*" : c+"";
+     letter = iflag ? "/"+letter+"/" : letter;
+     com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,letter,(int)com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getDistanceBetweenTexts(),(int)(y * zoom),com.baselet.control.enums.AlignHorizontal.LEFT,true); 
+     y += printLeft("",y)*0.9;
+  }
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>70</x>
+      <y>510</y>
+      <w>31</w>
+      <h>211</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+*/Hello, World!/*
+bg=#ff6600</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y = textHeight();
+drawRectangle(0,0,width,height);
+
+for(String textline : textlines)
+{        
+  String substring = textline;
+  boolean bflag = false;
+  boolean iflag = false;
+  
+  if(substring.startsWith("/") &amp;&amp; substring.endsWith("/"))
+  {
+  	 substring = substring.substring(1,substring.length()-1);
+     iflag = true;
+  }
+          
+  if(substring.startsWith("*") &amp;&amp; substring.endsWith("*"))
+  {
+  	 substring = substring.substring(1,substring.length()-1);
+     bflag = true;
+  }
+    
+  if(substring.startsWith("/") &amp;&amp; substring.endsWith("/"))
+  {
+  	 substring = substring.substring(1,substring.length()-1);
+     iflag = true;
+  }
+          
+  for(int i=0;i&lt;substring.length();i++)
+  {
+  	 char c = substring.charAt(i);
+     String letter = bflag ? "*"+c+"*" : c+"";
+     letter = iflag ? "/"+letter+"/" : letter;
+     com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,letter,(int) ((onGrid(width) * zoom - textWidth(letter, true)) / 2),(int)(y * zoom),com.baselet.control.enums.AlignHorizontal.LEFT,true); 
+     y += printLeft("",y)*0.9;
+  }
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>250</x>
+      <y>510</y>
+      <w>21</w>
+      <h>211</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+/*Hello, World!*/
+
+fg=#009900</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y = textHeight();
+
+for(String textline : textlines)
+{        
+  String substring = textline;
+  boolean bflag = false;
+  boolean iflag = false;
+  
+  if(substring.startsWith("/") &amp;&amp; substring.endsWith("/"))
+  {
+  	 substring = substring.substring(1,substring.length()-1);
+     iflag = true;
+  }
+          
+  if(substring.startsWith("*") &amp;&amp; substring.endsWith("*"))
+  {
+  	 substring = substring.substring(1,substring.length()-1);
+     bflag = true;
+  }
+    
+  if(substring.startsWith("/") &amp;&amp; substring.endsWith("/"))
+  {
+  	 substring = substring.substring(1,substring.length()-1);
+     iflag = true;
+  }
+          
+  for(int i=0;i&lt;substring.length();i++)
+  {
+  	 char c = substring.charAt(i);
+     String letter = bflag ? "*"+c+"*" : c+"";
+     letter = iflag ? "/"+letter+"/" : letter;
+     com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,letter,(int) ((onGrid(width) * zoom - textWidth(letter, true)) / 2),(int)(y * zoom),com.baselet.control.enums.AlignHorizontal.LEFT,true); 
+     y += printLeft("",y)*0.9;
+  }
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>280</x>
+      <y>510</y>
+      <w>31</w>
+      <h>211</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+
+*Hello,* /World!/</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+int y = textHeight();
+drawRectangle(0,0,width,height);
+
+for(String textline : textlines)
+{        
+  String[] subs = textline.split(" ");
+  
+  for(int j=0;j&lt;subs.length;j++)
+  {
+    boolean bflag = false;
+    boolean iflag = false;
+    String sub = subs[j];
+  
+    if(sub.startsWith("/") &amp;&amp; sub.endsWith("/"))
+    {
+        sub = sub.substring(1,sub.length()-1);
+        iflag = true;
+    }
+            
+    if(sub.startsWith("*") &amp;&amp; sub.endsWith("*"))
+    {
+    	sub = sub.substring(1,sub.length()-1);
+        bflag = true;
+    }
+      
+    if(sub.startsWith("/") &amp;&amp; sub.endsWith("/"))
+    {
+    	sub = sub.substring(1,sub.length()-1);
+        iflag = true;
+    }
+            
+    for(int i=0;i&lt;sub.length();i++)
+    {
+        char c = sub.charAt(i);
+        String letter = bflag ? "*"+c+"*" : c+"";
+        letter = iflag ? "/"+letter+"/" : letter;
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,letter,(int) ((onGrid(width) * zoom - textWidth(letter, true)) / 2),(int)(y * zoom),com.baselet.control.enums.AlignHorizontal.LEFT,true); 
+        y += printLeft("",y)*0.9;
+    }
+    
+    if(j&lt;subs.length-1)
+    {
+        y += printLeft("",y)*0.9;
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2," ",(int) ((onGrid(width) * zoom - textWidth(" ", true)) / 2),(int)(y * zoom),com.baselet.control.enums.AlignHorizontal.LEFT,true); 
+    }
+  }
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>350</x>
+      <y>510</y>
+      <w>21</w>
+      <h>211</h>
+    </coordinates>
+    <panel_attributes>// That needs to come first.
+fontsize=10
+/Hello, *this* World!/
+
+bg=#6699ff</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+drawRectangle(0,0,width,height);
+double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
+
+for(String textline : textlines)
+{
+    boolean gbflag = false;
+    boolean giflag = false;
+    
+    if(textline.startsWith("/") &amp;&amp; textline.endsWith("/") &amp;&amp; textline.length() - textline.replace("/","").length()==2)
+    {
+        textline = textline.substring(1,textline.length()-1);
+        giflag = true;    
+    }
+    
+    if(textline.startsWith("*") &amp;&amp; textline.endsWith("*") &amp;&amp; textline.length() - textline.replace("*","").length()==2)
+    {
+        textline = textline.substring(1,textline.length()-1);
+        gbflag = true;    
+    }
+    
+    if(textline.startsWith("/") &amp;&amp; textline.endsWith("/") &amp;&amp; textline.length() - textline.replace("/","").length()==2)
+    {
+        textline = textline.substring(1,textline.length()-1);
+        giflag = true;    
+    }
+
+    if(textline.startsWith("fontsize="))
+    {
+        textline = textline.substring("fontsize=".length(),textline.length());
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)Integer.parseInt(textline));
+        
+        continue; 
+    }  
+
+  int y = textHeight();
+  String[] subs = textline.split(" ");
+  
+  for(int j=0;j&lt;subs.length;j++)
+  {
+    boolean bflag = false;
+    boolean iflag = false;
+    String sub = subs[j];
+  
+    if(sub.startsWith("/") &amp;&amp; sub.endsWith("/"))
+    {
+        sub = sub.substring(1,sub.length()-1);
+        iflag = true;
+    }
+            
+    if(sub.startsWith("*") &amp;&amp; sub.endsWith("*"))
+    {
+    	sub = sub.substring(1,sub.length()-1);
+        bflag = true;
+    }
+      
+    if(sub.startsWith("/") &amp;&amp; sub.endsWith("/"))
+    {
+    	sub = sub.substring(1,sub.length()-1);
+        iflag = true;
+    }
+            
+    for(int i=0;i&lt;sub.length();i++)
+    {
+        char c = sub.charAt(i);
+        String letter = bflag || gbflag ? "*"+c+"*" : c+"";
+        letter = iflag || giflag ? "/"+letter+"/" : letter;
+        
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,letter,(int)((onGrid(width) * zoom - textWidth(letter, true)) / 2),(int)(y * zoom),com.baselet.control.enums.AlignHorizontal.LEFT,true); 
+        y += printLeft("",y)*0.9;
+    }
+    
+    if(j&lt;subs.length-1)
+    {
+        y += printLeft("",y)*0.9;
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2," ",(int)((onGrid(width) * zoom - textWidth(" ", true)) / 2),(int)(y * zoom),com.baselet.control.enums.AlignHorizontal.LEFT,true); 
+    }
+  }
+  
+  com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)fsize);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>20</x>
+      <y>860</y>
+      <w>141</w>
+      <h>41</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+fontsize=13
+/*Hello,*/ _World!_
+
+bg=#003366</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+try
+{
+    int y = textHeight();
+    Polygon poly = new Polygon();
+    poly.addPoint(width-12,0);
+    poly.addPoint(width-12,12);
+	 poly.addPoint(width,12);
+	 poly.addPoint(width,height);
+	 poly.addPoint(0,height); 
+    poly.addPoint(0,0);
+    drawPolygon(poly);
+
+    Polygon poly1 = new Polygon();
+	 poly1.addPoint(width-12,0);
+	 poly1.addPoint(width-12,12);
+	 poly1.addPoint(width,12);
+
+    drawPolygon(poly1);
+
+    // (1) Try to find global parameters such as, font size, etc.
+    double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
+    boolean fflag = false;
+    int newFSize = 14;
+
+    for(String textline : textlines)
+    {
+       String substring = textline;
+       int x = 5;
+       char c1;
+       boolean gbflag = false;
+       boolean giflag = false;
+       boolean guflag = false;
+
+       if(substring.startsWith("fontsize="))
+       {
+            substring = substring.substring("fontsize=".length(),substring.length());
+
+            try
+            {
+                newFSize = Integer.parseInt(substring.trim());
+            }
+            catch(NumberFormatException ex)
+            {
+                newFSize = (int)fsize;
+            }
+
+            com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)newFSize);
+            fflag = true;
+
+            continue;
+       }
+
+       if(fflag)
+       {    // The next sentence after Bumping into changing of a font size. 
+            y+=newFSize-fsize;
+            fflag = false;
+       }
+
+        while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
+        {   // (2) Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+           substring = substring.substring(1,substring.length()-1);
+
+           switch(c1)
+           {
+               case '*':
+               {
+                    gbflag = true;
+
+                    break;
+               }
+               case '/':
+               {
+                    giflag = true;
+
+                    break;
+               }
+               case '_':
+               {
+                   guflag = true;
+
+                   break;
+               }
+           }
+        }
+
+        String[] subs = substring.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+            
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
+
+        y += printLeft("",y);
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(fsize);
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>20</x>
+      <y>730</y>
+      <w>461</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>// Changing the font size is at the sentence level.
+halign=center
+fontsize=20
+/Hello, *World!*/
+*_Enjoy_ /UMLet!/*
+fontsize=10
+*/You're/*
+*He's the man*
+fontsize=17
+halign=center
+She's
+/*רב* שלום/
+bg=#009900
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+try
+{
+    int y = textHeight();
+    drawRectangle(0,0,width,height);
+
+    // (1) Try to find global parameters such as, font size, etc.
+    double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
+    boolean fflag = false;
+    boolean calign = false;
+    int newFSize = 14;
+
+    for(String textline : textlines)
+    {
+       String substring = textline;
+       int x = 10;
+       char c1;
+       boolean gbflag = false;
+       boolean giflag = false;
+       boolean guflag = false;
+
+       if(substring.startsWith("fontsize="))
+       {
+            substring = substring.substring("fontsize=".length(),substring.length());
+
+            try
+            {
+                newFSize = Integer.parseInt(substring.trim());
+            }
+            catch(NumberFormatException ex)
+            {
+                newFSize = (int)fsize;
+            }
+
+            com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)newFSize);
+            fflag = true;
+
+            continue;
+       }
+       else if(substring.startsWith("halign=center"))
+       {
+           calign = true;
+
+           continue;
+       }
+
+       if(fflag)
+       {    // The next sentence after Bumping into changing of a font size. 
+            y+=newFSize-fsize;
+            fflag = false;
+       }
+       
+       if(calign &amp;&amp; !substring.startsWith("fontsize="))
+       {	  // The next sentence after Bumping into align setting. 
+           int w = textWidth(substring,true);
+           x = (width-w)/2;
+           calign = false;
+       }
+
+        while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
+        {   // (2) Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+           substring = substring.substring(1,substring.length()-1);
+
+           switch(c1)
+           {
+               case '*':
+               {
+                    gbflag = true;
+
+                    break;
+               }
+               case '/':
+               {
+                    giflag = true;
+
+                    break;
+               }
+               case '_':
+               {
+                   guflag = true;
+
+                   break;
+               }
+           }
+        }
+
+        String[] subs = substring.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+            
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
+
+        y += printLeft("",y);
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(fsize);
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+</diagram>
