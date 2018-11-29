@@ -493,22 +493,16 @@ for(String textline : textlines)
     <type>CustomElementImpl</type>
     <coordinates>
       <x>20</x>
-      <y>730</y>
-      <w>351</w>
-      <h>121</h>
+      <y>860</y>
+      <w>141</w>
+      <h>41</h>
     </coordinates>
-    <panel_attributes>// Changing the font size is at the sentence level.
-fontsize=20
-/Hello, *World!*/
-*_Enjoy_ /UMLet!/*
-fontsize=10
-*/You're/*
-*He's the man*
-fontsize=17
-She's
-/*רב* שלום/
-bg=#009900
-</panel_attributes>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+fontsize=13
+/*Hello,*/ _World!_
+
+bg=#003366</panel_attributes>
     <additional_attributes/>
     <custom_code>//Modify the code below to define the element's behavior.
 //
@@ -520,7 +514,21 @@ bg=#009900
 try
 {
     int y = textHeight();
-    drawRectangle(0,0,width,height);
+    Polygon poly = new Polygon();
+    poly.addPoint(width-12,0);
+    poly.addPoint(width-12,12);
+	 poly.addPoint(width,12);
+	 poly.addPoint(width,height);
+	 poly.addPoint(0,height); 
+    poly.addPoint(0,0);
+    drawPolygon(poly);
+
+    Polygon poly1 = new Polygon();
+	 poly1.addPoint(width-12,0);
+	 poly1.addPoint(width-12,12);
+	 poly1.addPoint(width,12);
+
+    drawPolygon(poly1);
 
     // (1) Try to find global parameters such as, font size, etc.
     double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
@@ -530,7 +538,7 @@ try
     for(String textline : textlines)
     {
        String substring = textline;
-       int x = 10;
+       int x = 5;
        char c1;
        boolean gbflag = false;
        boolean giflag = false;
@@ -656,16 +664,24 @@ catch(Exception e)
     <type>CustomElementImpl</type>
     <coordinates>
       <x>20</x>
-      <y>860</y>
-      <w>141</w>
-      <h>41</h>
+      <y>730</y>
+      <w>461</w>
+      <h>121</h>
     </coordinates>
-    <panel_attributes>// Modify the text below and
-// observe the element preview.
-fontsize=13
-/*Hello,*/ _World!_
-
-bg=#003366</panel_attributes>
+    <panel_attributes>// Changing the font size is at the sentence level.
+halign=center
+fontsize=20
+/Hello, *World!*/
+*_Enjoy_ /UMLet!/*
+fontsize=10
+*/You're/*
+*He's the man*
+fontsize=17
+halign=center
+She's
+/*רב* שלום/
+bg=#009900
+</panel_attributes>
     <additional_attributes/>
     <custom_code>//Modify the code below to define the element's behavior.
 //
@@ -677,31 +693,18 @@ bg=#003366</panel_attributes>
 try
 {
     int y = textHeight();
-    Polygon poly = new Polygon();
-    poly.addPoint(width-12,0);
-    poly.addPoint(width-12,12);
-	 poly.addPoint(width,12);
-	 poly.addPoint(width,height);
-	 poly.addPoint(0,height); 
-    poly.addPoint(0,0);
-    drawPolygon(poly);
-
-    Polygon poly1 = new Polygon();
-	 poly1.addPoint(width-12,0);
-	 poly1.addPoint(width-12,12);
-	 poly1.addPoint(width,12);
-
-    drawPolygon(poly1);
+    drawRectangle(0,0,width,height);
 
     // (1) Try to find global parameters such as, font size, etc.
     double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
     boolean fflag = false;
+    boolean calign = false;
     int newFSize = 14;
 
     for(String textline : textlines)
     {
        String substring = textline;
-       int x = 5;
+       int x = 10;
        char c1;
        boolean gbflag = false;
        boolean giflag = false;
@@ -725,11 +728,24 @@ try
 
             continue;
        }
+       else if(substring.startsWith("halign=center"))
+       {
+           calign = true;
+
+           continue;
+       }
 
        if(fflag)
        {    // The next sentence after Bumping into changing of a font size. 
             y+=newFSize-fsize;
             fflag = false;
+       }
+       
+       if(calign &amp;&amp; !substring.startsWith("fontsize="))
+       {	  // The next sentence after Bumping into align setting. 
+           int w = textWidth(substring,true);
+           x = (width-w)/2;
+           calign = false;
        }
 
         while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
