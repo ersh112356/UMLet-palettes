@@ -31,10 +31,18 @@ try
     {
         if(textline.startsWith("image="))
         {
-        	  String path = new java.io.File(com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFileHandler().getFullPathName()).getParent();
-           String name = textline.substring("image=".length(),textline.length());
-           java.awt.image.BufferedImage image = javax.imageio.ImageIO.read(new java.io.File(path+java.io.File.separatorChar+name));
-           g2.drawImage(image,0,0,width,height,null);
+        	  try
+        	  {
+        	     String path = new java.io.File(com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFileHandler().getFullPathName()).getParent();
+              String name = textline.substring("image=".length(),textline.length());
+              java.awt.image.BufferedImage image = javax.imageio.ImageIO.read(new java.io.File(path+java.io.File.separatorChar+name));
+              g2.drawImage(image,0,0,width,height,null);
+        	  }
+        	  catch(Exception ex)
+        	  {
+        	  	   int y = textHeight();
+        	  	   printCenter("Image can't be loaded.",y);
+        	  }
            
            continue;
         }
