@@ -1379,7 +1379,8 @@ catch(Exception e)
       <w>41</w>
       <h>161</h>
     </coordinates>
-    <panel_attributes>// That takes effect globaly.
+    <panel_attributes>// Doesn't work well with multiple sentecnes.
+// That takes effect globaly.
 // That must come first. 
 gradient=ltr
 //gradient=btt
@@ -1388,7 +1389,7 @@ gradient=true
 valign=center
 fontsize=20
 /Hello, *World!*/
-/ello, *World!*/
+
 bg=#999900
 </panel_attributes>
     <additional_attributes/>
