@@ -4,8 +4,8 @@
   <element>
     <id>Text</id>
     <coordinates>
-      <x>20</x>
-      <y>20</y>
+      <x>10</x>
+      <y>10</y>
       <w>100</w>
       <h>50</h>
     </coordinates>
@@ -28,8 +28,8 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black bg=#cc0066 //Parame
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>30</x>
-      <y>90</y>
+      <x>10</x>
+      <y>80</y>
       <w>30</w>
       <h>220</h>
     </coordinates>
@@ -41,8 +41,8 @@ lw=5.0
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>20</x>
-      <y>90</y>
+      <x>0</x>
+      <y>80</y>
       <w>30</w>
       <h>220</h>
     </coordinates>
@@ -54,8 +54,8 @@ lw=5.0
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>110</y>
+      <x>50</x>
+      <y>100</y>
       <w>240</w>
       <h>30</h>
     </coordinates>
@@ -67,8 +67,8 @@ fg=#9999ee</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>100</x>
-      <y>130</y>
+      <x>50</x>
+      <y>110</y>
       <w>240</w>
       <h>30</h>
     </coordinates>
@@ -80,8 +80,8 @@ fg=#9999ee</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>140</x>
-      <y>20</y>
+      <x>120</x>
+      <y>10</y>
       <w>100</w>
       <h>50</h>
     </coordinates>
@@ -104,8 +104,8 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black bg=#666666 //Parame
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
-      <y>100</y>
+      <x>30</x>
+      <y>70</y>
       <w>140</w>
       <h>150</h>
     </coordinates>
@@ -116,8 +116,8 @@ request/response</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>110</x>
-      <y>190</y>
+      <x>60</x>
+      <y>170</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -128,8 +128,8 @@ bg=#ffcc00</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
-      <y>190</y>
+      <x>170</x>
+      <y>170</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -140,8 +140,8 @@ bg=#999900</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>110</x>
-      <y>240</y>
+      <x>60</x>
+      <y>220</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -152,8 +152,8 @@ bg=#0066ff</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>110</x>
-      <y>290</y>
+      <x>60</x>
+      <y>270</y>
       <w>70</w>
       <h>20</h>
     </coordinates>
@@ -165,8 +165,8 @@ bg=#009999</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
-      <y>240</y>
+      <x>170</x>
+      <y>220</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -177,12 +177,12 @@ bg=#cc0066</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>250</x>
-      <y>10</y>
-      <w>80</w>
+      <x>220</x>
+      <y>0</y>
+      <w>60</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>Customer
+    <panel_attributes>User
 bg=#666699
 fg=#666699</panel_attributes>
     <additional_attributes/>
@@ -190,9 +190,9 @@ fg=#666699</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>30</y>
-      <w>60</w>
+      <x>280</x>
+      <y>20</y>
+      <w>50</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>
@@ -203,9 +203,9 @@ group=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>10</y>
-      <w>60</w>
+      <x>280</x>
+      <y>0</y>
+      <w>50</w>
       <h>20</h>
     </coordinates>
     <panel_attributes>_*Web*_
@@ -217,9 +217,9 @@ group=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>30</y>
-      <w>60</w>
+      <x>330</x>
+      <y>20</y>
+      <w>50</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>
@@ -229,9 +229,9 @@ group=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>10</y>
-      <w>60</w>
+      <x>330</x>
+      <y>0</y>
+      <w>50</w>
       <h>20</h>
     </coordinates>
     <panel_attributes>_*Web*_
@@ -242,9 +242,9 @@ bg=#ffcc99</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>180</y>
-      <w>60</w>
+      <x>280</x>
+      <y>170</y>
+      <w>50</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>
@@ -254,9 +254,9 @@ bg=#ffcc99</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>160</y>
-      <w>60</w>
+      <x>280</x>
+      <y>150</y>
+      <w>50</w>
       <h>20</h>
     </coordinates>
     <panel_attributes>_*Web*_
@@ -267,9 +267,9 @@ bg=#cccc99</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>180</y>
-      <w>60</w>
+      <x>330</x>
+      <y>170</y>
+      <w>50</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>
@@ -279,9 +279,9 @@ bg=#cccc99</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>160</y>
-      <w>60</w>
+      <x>330</x>
+      <y>150</y>
+      <w>50</w>
       <h>20</h>
     </coordinates>
     <panel_attributes>_*Web*_
@@ -290,10 +290,62 @@ bg=#ffcccc</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <type>CustomElementImpl</type>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>300</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>
+
+group=7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>300</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>
+
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>300</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>
+
+group=9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
     <coordinates>
       <x>30</x>
-      <y>320</y>
+      <y>300</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>
+
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>10</x>
+      <y>300</y>
       <w>21</w>
       <h>121</h>
     </coordinates>
@@ -308,7 +360,7 @@ fontsize=14
 *Web*
 bg=#999900
 
-group=3</panel_attributes>
+group=6</panel_attributes>
     <additional_attributes/>
     <custom_code>//Modify the code below to define the element's behavior.
 //
@@ -435,7 +487,7 @@ try
        
        if(calign)
        {	  // The next sentence after Bumping into align setting. 
-           int w = textWidth(substring,true);
+           int w = textWidth(substring.replace("*","").replace("/","").replace("_",""),true);
            y = (height-w)/2-height;
            calign = false;
        }
@@ -512,8 +564,16 @@ try
                 String name = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFont().getFontName();
                 int style = lbflag || gbflag ? Font.BOLD : Font.PLAIN;
                 style = liflag || giflag ? style | Font.ITALIC : style;
-                style = luflag || guflag ? style | java.awt.font.TextAttribute.UNDERLINE_ON : style;
+
                 Font nfont = new Font(name,style,(int)newFSize);
+                
+				    if(luflag || guflag)
+					 {
+					 		Map&lt;java.awt.font.TextAttribute, Integer&gt; fontAttributes = new HashMap&lt;java.awt.font.TextAttribute, Integer&gt;();
+					 		fontAttributes.put(java.awt.font.TextAttribute.UNDERLINE, java.awt.font.TextAttribute.UNDERLINE_ON);
+					 		nfont = nfont.deriveFont(fontAttributes);
+					 }
+                
                 g2.setFont(nfont);
                 g2.rotate(Math.toRadians(270));
                 g2.drawString(sub,(int)(y*zoom),(int)(x*zoom));
@@ -537,23 +597,10 @@ catch(Exception e)
 {}</custom_code>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>50</x>
-      <y>320</y>
-      <w>60</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>
-
-group=3</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>130</x>
-      <y>320</y>
+      <x>90</x>
+      <y>300</y>
       <w>21</w>
       <h>121</h>
     </coordinates>
@@ -568,7 +615,7 @@ fontsize=14
 *Web*
 bg=#ffcccc
 
-group=2</panel_attributes>
+group=7</panel_attributes>
     <additional_attributes/>
     <custom_code>//Modify the code below to define the element's behavior.
 //
@@ -695,7 +742,7 @@ try
        
        if(calign)
        {	  // The next sentence after Bumping into align setting. 
-           int w = textWidth(substring,true);
+           int w = textWidth(substring.replace("*","").replace("/","").replace("_",""),true);
            y = (height-w)/2-height;
            calign = false;
        }
@@ -772,8 +819,16 @@ try
                 String name = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFont().getFontName();
                 int style = lbflag || gbflag ? Font.BOLD : Font.PLAIN;
                 style = liflag || giflag ? style | Font.ITALIC : style;
-                style = luflag || guflag ? style | java.awt.font.TextAttribute.UNDERLINE_ON : style;
+
                 Font nfont = new Font(name,style,(int)newFSize);
+                
+				    if(luflag || guflag)
+					 {
+					 		Map&lt;java.awt.font.TextAttribute, Integer&gt; fontAttributes = new HashMap&lt;java.awt.font.TextAttribute, Integer&gt;();
+					 		fontAttributes.put(java.awt.font.TextAttribute.UNDERLINE, java.awt.font.TextAttribute.UNDERLINE_ON);
+					 		nfont = nfont.deriveFont(fontAttributes);
+					 }
+                
                 g2.setFont(nfont);
                 g2.rotate(Math.toRadians(270));
                 g2.drawString(sub,(int)(y*zoom),(int)(x*zoom));
@@ -797,23 +852,10 @@ catch(Exception e)
 {}</custom_code>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>150</x>
-      <y>320</y>
-      <w>60</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>
-
-group=2</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>230</x>
-      <y>320</y>
+      <x>170</x>
+      <y>300</y>
       <w>21</w>
       <h>121</h>
     </coordinates>
@@ -828,7 +870,7 @@ fontsize=14
 *Web*
 bg=#6699ff
 
-group=4</panel_attributes>
+group=8</panel_attributes>
     <additional_attributes/>
     <custom_code>//Modify the code below to define the element's behavior.
 //
@@ -955,7 +997,7 @@ try
        
        if(calign)
        {	  // The next sentence after Bumping into align setting. 
-           int w = textWidth(substring,true);
+           int w = textWidth(substring.replace("*","").replace("/","").replace("_",""),true);
            y = (height-w)/2-height;
            calign = false;
        }
@@ -1032,8 +1074,16 @@ try
                 String name = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFont().getFontName();
                 int style = lbflag || gbflag ? Font.BOLD : Font.PLAIN;
                 style = liflag || giflag ? style | Font.ITALIC : style;
-                style = luflag || guflag ? style | java.awt.font.TextAttribute.UNDERLINE_ON : style;
+
                 Font nfont = new Font(name,style,(int)newFSize);
+                
+				    if(luflag || guflag)
+					 {
+					 		Map&lt;java.awt.font.TextAttribute, Integer&gt; fontAttributes = new HashMap&lt;java.awt.font.TextAttribute, Integer&gt;();
+					 		fontAttributes.put(java.awt.font.TextAttribute.UNDERLINE, java.awt.font.TextAttribute.UNDERLINE_ON);
+					 		nfont = nfont.deriveFont(fontAttributes);
+					 }
+                
                 g2.setFont(nfont);
                 g2.rotate(Math.toRadians(270));
                 g2.drawString(sub,(int)(y*zoom),(int)(x*zoom));
@@ -1057,23 +1107,10 @@ catch(Exception e)
 {}</custom_code>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>250</x>
-      <y>320</y>
-      <w>60</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>
-
-group=4</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>330</x>
-      <y>320</y>
+      <x>250</x>
+      <y>300</y>
       <w>21</w>
       <h>121</h>
     </coordinates>
@@ -1088,7 +1125,7 @@ fontsize=14
 *Web*
 bg=#ffcc99
 
-group=5</panel_attributes>
+group=9</panel_attributes>
     <additional_attributes/>
     <custom_code>//Modify the code below to define the element's behavior.
 //
@@ -1215,7 +1252,7 @@ try
        
        if(calign)
        {	  // The next sentence after Bumping into align setting. 
-           int w = textWidth(substring,true);
+           int w = textWidth(substring.replace("*","").replace("/","").replace("_",""),true);
            y = (height-w)/2-height;
            calign = false;
        }
@@ -1292,8 +1329,16 @@ try
                 String name = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFont().getFontName();
                 int style = lbflag || gbflag ? Font.BOLD : Font.PLAIN;
                 style = liflag || giflag ? style | Font.ITALIC : style;
-                style = luflag || guflag ? style | java.awt.font.TextAttribute.UNDERLINE_ON : style;
+
                 Font nfont = new Font(name,style,(int)newFSize);
+                
+				    if(luflag || guflag)
+					 {
+					 		Map&lt;java.awt.font.TextAttribute, Integer&gt; fontAttributes = new HashMap&lt;java.awt.font.TextAttribute, Integer&gt;();
+					 		fontAttributes.put(java.awt.font.TextAttribute.UNDERLINE, java.awt.font.TextAttribute.UNDERLINE_ON);
+					 		nfont = nfont.deriveFont(fontAttributes);
+					 }
+                
                 g2.setFont(nfont);
                 g2.rotate(Math.toRadians(270));
                 g2.drawString(sub,(int)(y*zoom),(int)(x*zoom));
@@ -1315,18 +1360,5 @@ try
 }
 catch(Exception e)
 {}</custom_code>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>350</x>
-      <y>320</y>
-      <w>60</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>
-
-group=5</panel_attributes>
-    <additional_attributes/>
   </element>
 </diagram>
