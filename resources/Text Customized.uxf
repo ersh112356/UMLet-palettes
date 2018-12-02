@@ -1388,7 +1388,7 @@ gradient=true
 // Those settings are at the sentence level.
 valign=center
 fontsize=20
-/Hello, *World!*/
+/_Hello,_ *World!*/
 
 bg=#999900
 </panel_attributes>
@@ -1518,7 +1518,7 @@ try
        
        if(calign)
        {	  // The next sentence after Bumping into align setting. 
-           int w = textWidth(substring,true);
+           int w = textWidth(substring.replace("*","").replace("/","").replace("_",""),true);
            y = (height-w)/2-height;
            calign = false;
        }
@@ -1595,8 +1595,16 @@ try
                 String name = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFont().getFontName();
                 int style = lbflag || gbflag ? Font.BOLD : Font.PLAIN;
                 style = liflag || giflag ? style | Font.ITALIC : style;
-                style = luflag || guflag ? style | java.awt.font.TextAttribute.UNDERLINE_ON : style;
+
                 Font nfont = new Font(name,style,(int)newFSize);
+                
+				    if(luflag || guflag)
+					 {
+					 		Map&lt;java.awt.font.TextAttribute, Integer&gt; fontAttributes = new HashMap&lt;java.awt.font.TextAttribute, Integer&gt;();
+					 		fontAttributes.put(java.awt.font.TextAttribute.UNDERLINE, java.awt.font.TextAttribute.UNDERLINE_ON);
+					 		nfont = nfont.deriveFont(fontAttributes);
+					 }
+                
                 g2.setFont(nfont);
                 g2.rotate(Math.toRadians(270));
                 g2.drawString(sub,(int)(y*zoom),(int)(x*zoom));
@@ -1636,7 +1644,7 @@ gradient=true
 // Those settings are at the sentence level.
 valign=center
 fontsize=20
-/Hello, *World!*/
+/_Hello,_ *World!*/
 
 bg=#999900
 </panel_attributes>
@@ -1767,7 +1775,7 @@ try
        
        if(calign)
        {	  // The next sentence after Bumping into align setting. 
-           int w = textWidth(substring,true);
+           int w = textWidth(substring.replace("*","").replace("/","").replace("_",""),true);
            y = (height-w)/2;
            calign = false;
        }
@@ -1844,12 +1852,20 @@ try
                 String name = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFont().getFontName();
                 int style = lbflag || gbflag ? Font.BOLD : Font.PLAIN;
                 style = liflag || giflag ? style | Font.ITALIC : style;
-                style = luflag || guflag ? style | java.awt.font.TextAttribute.UNDERLINE_ON : style;
+                
                 Font nfont = new Font(name,style,(int)newFSize);
+
+					 if(luflag || guflag)
+					 {
+					 		Map&lt;java.awt.font.TextAttribute, Integer&gt; fontAttributes = new HashMap&lt;java.awt.font.TextAttribute, Integer&gt;();
+					 		fontAttributes.put(java.awt.font.TextAttribute.UNDERLINE, java.awt.font.TextAttribute.UNDERLINE_ON);
+					 		nfont = nfont.deriveFont(fontAttributes);
+					 }
+                
                 g2.setFont(nfont);
                 g2.rotate(Math.toRadians(90));
                 g2.drawString(sub,(int)(y*zoom),(int)((x/2)*zoom));
-                //printCenter("                     line="+line,y);
+                
                 // Reset.
                 g2.setTransform(old);
                 y += textWidth(sub,true);
