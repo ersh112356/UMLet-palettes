@@ -4,8 +4,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
-      <y>40</y>
+      <x>120</x>
+      <y>10</y>
       <w>240</w>
       <h>60</h>
     </coordinates>
@@ -24,8 +24,8 @@ lw=2.0
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>290</x>
-      <y>120</y>
+      <x>220</x>
+      <y>90</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -38,8 +38,8 @@ bg=#003366
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>330</x>
-      <y>290</y>
+      <x>260</x>
+      <y>260</y>
       <w>20</w>
       <h>60</h>
     </coordinates>
@@ -51,8 +51,8 @@ layer=-2</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>290</x>
-      <y>230</y>
+      <x>220</x>
+      <y>200</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -63,8 +63,8 @@ bg=#999933</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>80</x>
-      <y>60</y>
+      <x>10</x>
+      <y>30</y>
       <w>60</w>
       <h>110</h>
     </coordinates>
@@ -75,8 +75,8 @@ bg=#999966</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>80</x>
-      <y>480</y>
+      <x>10</x>
+      <y>450</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -87,8 +87,8 @@ bg=#313131</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
-      <y>250</y>
+      <x>260</x>
+      <y>220</y>
       <w>30</w>
       <h>140</h>
     </coordinates>
@@ -100,8 +100,8 @@ layer=-3</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>80</x>
-      <y>280</y>
+      <x>10</x>
+      <y>250</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -112,8 +112,8 @@ bg=#b1b1b1</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>80</x>
-      <y>380</y>
+      <x>10</x>
+      <y>350</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -124,8 +124,8 @@ bg=#515151</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>80</y>
+      <x>80</x>
+      <y>50</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
@@ -136,8 +136,8 @@ bg=#515151</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>80</y>
+      <x>210</x>
+      <y>50</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
@@ -148,8 +148,8 @@ bg=#515151</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>380</y>
+      <x>200</x>
+      <y>350</y>
       <w>200</w>
       <h>60</h>
     </coordinates>
@@ -161,8 +161,8 @@ bg=#515151</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>440</y>
+      <x>200</x>
+      <y>410</y>
       <w>190</w>
       <h>60</h>
     </coordinates>
@@ -175,8 +175,8 @@ group=1</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>270</x>
-      <y>460</y>
+      <x>200</x>
+      <y>430</y>
       <w>20</w>
       <h>40</h>
     </coordinates>
@@ -189,8 +189,8 @@ group=1</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>80</x>
-      <y>180</y>
+      <x>10</x>
+      <y>150</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -201,8 +201,8 @@ bg=#e1e1e1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>380</x>
-      <y>490</y>
+      <x>310</x>
+      <y>460</y>
       <w>70</w>
       <h>30</h>
     </coordinates>
@@ -214,8 +214,8 @@ style=wordwrap
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
-      <y>30</y>
+      <x>120</x>
+      <y>0</y>
       <w>190</w>
       <h>30</h>
     </coordinates>
@@ -225,8 +225,8 @@ style=wordwrap
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>410</x>
-      <y>200</y>
+      <x>340</x>
+      <y>170</y>
       <w>30</w>
       <h>180</h>
     </coordinates>
@@ -238,8 +238,8 @@ fg=#003366
   <element>
     <id>Text</id>
     <coordinates>
-      <x>290</x>
-      <y>490</y>
+      <x>220</x>
+      <y>460</y>
       <w>100</w>
       <h>70</h>
     </coordinates>
@@ -251,8 +251,8 @@ style=wordwrap
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>290</x>
-      <y>170</y>
+      <x>220</x>
+      <y>140</y>
       <w>141</w>
       <h>41</h>
     </coordinates>
