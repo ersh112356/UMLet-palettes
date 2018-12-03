@@ -5,7 +5,7 @@
     <id>Relation</id>
     <coordinates>
       <x>120</x>
-      <y>10</y>
+      <y>20</y>
       <w>240</w>
       <h>60</h>
     </coordinates>
@@ -24,8 +24,8 @@ lw=2.0
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>220</x>
-      <y>90</y>
+      <x>70</x>
+      <y>100</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -39,7 +39,7 @@ bg=#003366
     <id>UMLGeneric</id>
     <coordinates>
       <x>260</x>
-      <y>260</y>
+      <y>270</y>
       <w>20</w>
       <h>60</h>
     </coordinates>
@@ -52,11 +52,11 @@ layer=-2</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>220</x>
-      <y>200</y>
+      <y>210</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>_:O1_
+    <panel_attributes>_O1_
 bg=#999933</panel_attributes>
     <additional_attributes/>
   </element>
@@ -64,7 +64,7 @@ bg=#999933</panel_attributes>
     <id>UMLActor</id>
     <coordinates>
       <x>10</x>
-      <y>30</y>
+      <y>40</y>
       <w>60</w>
       <h>110</h>
     </coordinates>
@@ -76,7 +76,7 @@ bg=#999966</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>10</x>
-      <y>450</y>
+      <y>460</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -88,7 +88,7 @@ bg=#313131</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>260</x>
-      <y>220</y>
+      <y>230</y>
       <w>30</w>
       <h>140</h>
     </coordinates>
@@ -101,7 +101,7 @@ layer=-3</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>10</x>
-      <y>250</y>
+      <y>260</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -113,7 +113,7 @@ bg=#b1b1b1</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>10</x>
-      <y>350</y>
+      <y>360</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -125,7 +125,7 @@ bg=#515151</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>80</x>
-      <y>50</y>
+      <y>60</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
@@ -137,7 +137,7 @@ bg=#515151</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>210</x>
-      <y>50</y>
+      <y>60</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
@@ -149,7 +149,7 @@ bg=#515151</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>200</x>
-      <y>350</y>
+      <y>360</y>
       <w>200</w>
       <h>60</h>
     </coordinates>
@@ -162,7 +162,7 @@ bg=#515151</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>200</x>
-      <y>410</y>
+      <y>420</y>
       <w>190</w>
       <h>60</h>
     </coordinates>
@@ -176,7 +176,7 @@ group=1</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>200</x>
-      <y>430</y>
+      <y>440</y>
       <w>20</w>
       <h>40</h>
     </coordinates>
@@ -190,7 +190,7 @@ group=1</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>10</x>
-      <y>150</y>
+      <y>160</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -202,7 +202,7 @@ bg=#e1e1e1</panel_attributes>
     <id>Text</id>
     <coordinates>
       <x>310</x>
-      <y>460</y>
+      <y>470</y>
       <w>70</w>
       <h>30</h>
     </coordinates>
@@ -215,7 +215,7 @@ style=wordwrap
     <id>Relation</id>
     <coordinates>
       <x>120</x>
-      <y>0</y>
+      <y>10</y>
       <w>190</w>
       <h>30</h>
     </coordinates>
@@ -226,20 +226,20 @@ style=wordwrap
     <id>Relation</id>
     <coordinates>
       <x>340</x>
-      <y>170</y>
+      <y>130</y>
       <w>30</w>
-      <h>180</h>
+      <h>230</h>
     </coordinates>
     <panel_attributes>lt=&lt;..
 fg=#003366
 </panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Text</id>
     <coordinates>
       <x>220</x>
-      <y>460</y>
+      <y>470</y>
       <w>100</w>
       <h>70</h>
     </coordinates>
@@ -252,7 +252,7 @@ style=wordwrap
     <type>CustomElementImpl</type>
     <coordinates>
       <x>220</x>
-      <y>140</y>
+      <y>100</y>
       <w>141</w>
       <h>41</h>
     </coordinates>
@@ -326,6 +326,237 @@ try
        {    // The next sentence after Bumping into changing of a font size. 
             y+=newFSize-fsize;
             fflag = false;
+       }
+
+        while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
+        {   // (2) Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+           substring = substring.substring(1,substring.length()-1);
+
+           switch(c1)
+           {
+               case '*':
+               {
+                    gbflag = true;
+
+                    break;
+               }
+               case '/':
+               {
+                    giflag = true;
+
+                    break;
+               }
+               case '_':
+               {
+                   guflag = true;
+
+                   break;
+               }
+           }
+        }
+
+        String[] subs = substring.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+            
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
+
+        y += printLeft("",y);
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(fsize);
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>220</x>
+      <y>170</y>
+      <w>101</w>
+      <h>31</h>
+    </coordinates>
+    <panel_attributes>// That takes effect globaly.
+// That must come first. 
+gradient=btt
+gradient=true
+// Those settings are at the sentence level.
+halign=center
+fontsize=14
+_Web_
+
+bg=#999933
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+try
+{
+    int y = textHeight();
+
+    // (1) Try to find global parameters such as, font size, etc.
+    double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
+    boolean fflag = false;
+    boolean calign = false;
+    boolean ltr = true;
+    boolean ttb = true;
+    boolean frame = true;
+    int newFSize = 14;
+
+    for(String textline : textlines)
+    {
+       String substring = textline;
+       int x = 10;
+       char c1;
+       boolean gbflag = false;
+       boolean giflag = false;
+       boolean guflag = false;
+
+       if(substring.startsWith("fontsize="))
+       {
+            substring = substring.substring("fontsize=".length(),substring.length());
+
+            try
+            {
+                newFSize = Integer.parseInt(substring.trim());
+            }
+            catch(NumberFormatException ex)
+            {
+                newFSize = (int)fsize;
+            }
+
+            com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)newFSize);
+            fflag = true;
+
+            continue;
+       }
+       else if(substring.startsWith("halign=center"))
+       {
+           calign = true;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=rtl"))
+       {
+           ltr = false;
+                   
+           continue;
+       }
+       else if(substring.startsWith("gradient=btt"))
+       {
+           ttb = false;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=true"))
+       {    // Takes effect, globaly.
+            int x1 =0, x2 = width, y1 = 0,y2 = height;
+            
+            if(!ltr)
+            {
+                x1 = width;
+                x2 = 0;
+            }
+            
+            if(!ttb)
+            {
+            	 x1 = width;
+            	 x2 = width;
+                y1 = height;
+                y2 = 0;
+            }
+
+				int xstart = frame ? 1 : 0;
+				int ystart = frame ? 1 : 0;
+            int twidth = frame ? width-1 : width;
+            int theight = frame ? height-1 : height;
+            
+            GradientPaint blueToBlack = new GradientPaint(x1,y1,bgColor.brighter(),x2,y2,bgColor);
+            g2.draw(new Rectangle(0,0,width,height));
+            g2.setPaint(blueToBlack);
+            g2.fill(new java.awt.geom.Rectangle2D.Double(xstart,ystart,twidth,theight));
+            g2.setColor(fgColor);
+
+            continue;
+       }
+       else if(substring.startsWith("gradient=false"))
+       {
+       		drawRectangle(0,0,width,height);
+
+       		continue;
+       }
+       else if(substring.startsWith("frame=false"))
+       {
+       		frame = false;
+       }
+
+       if(fflag)
+       {    // The next sentence after Bumping into changing of a font size. 
+            y+=newFSize-fsize;
+            fflag = false;
+       }
+       
+       if(calign)
+       {	  // The next sentence after Bumping into align setting. 
+           int w = textWidth(substring,true);
+           x = (width-w)/2;
+           calign = false;
        }
 
         while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
