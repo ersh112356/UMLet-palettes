@@ -25,7 +25,7 @@ lw=2.0
     <id>UMLNote</id>
     <coordinates>
       <x>70</x>
-      <y>110</y>
+      <y>120</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
@@ -39,7 +39,7 @@ bg=#003366
     <id>UMLGeneric</id>
     <coordinates>
       <x>260</x>
-      <y>270</y>
+      <y>280</y>
       <w>20</w>
       <h>60</h>
     </coordinates>
@@ -52,7 +52,7 @@ layer=-2</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>220</x>
-      <y>210</y>
+      <y>220</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -64,7 +64,7 @@ bg=#999933</panel_attributes>
     <id>UMLActor</id>
     <coordinates>
       <x>10</x>
-      <y>40</y>
+      <y>50</y>
       <w>60</w>
       <h>110</h>
     </coordinates>
@@ -76,7 +76,7 @@ bg=#999966</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>10</x>
-      <y>460</y>
+      <y>470</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -88,7 +88,7 @@ bg=#313131</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>260</x>
-      <y>230</y>
+      <y>240</y>
       <w>30</w>
       <h>140</h>
     </coordinates>
@@ -101,7 +101,7 @@ layer=-3</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>10</x>
-      <y>260</y>
+      <y>270</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -113,7 +113,7 @@ bg=#b1b1b1</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>10</x>
-      <y>360</y>
+      <y>370</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -125,7 +125,7 @@ bg=#515151</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>80</x>
-      <y>30</y>
+      <y>40</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
@@ -137,7 +137,7 @@ bg=#515151</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>210</x>
-      <y>30</y>
+      <y>40</y>
       <w>150</w>
       <h>40</h>
     </coordinates>
@@ -149,7 +149,7 @@ bg=#515151</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>200</x>
-      <y>360</y>
+      <y>370</y>
       <w>200</w>
       <h>60</h>
     </coordinates>
@@ -162,7 +162,7 @@ bg=#515151</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>200</x>
-      <y>420</y>
+      <y>430</y>
       <w>190</w>
       <h>60</h>
     </coordinates>
@@ -176,7 +176,7 @@ group=1</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>200</x>
-      <y>440</y>
+      <y>450</y>
       <w>20</w>
       <h>40</h>
     </coordinates>
@@ -190,7 +190,7 @@ group=1</panel_attributes>
     <id>UMLFrame</id>
     <coordinates>
       <x>10</x>
-      <y>160</y>
+      <y>170</y>
       <w>180</w>
       <h>70</h>
     </coordinates>
@@ -202,7 +202,7 @@ bg=#e1e1e1</panel_attributes>
     <id>Text</id>
     <coordinates>
       <x>310</x>
-      <y>470</y>
+      <y>480</y>
       <w>70</w>
       <h>30</h>
     </coordinates>
@@ -226,7 +226,7 @@ style=wordwrap
     <id>Relation</id>
     <coordinates>
       <x>340</x>
-      <y>140</y>
+      <y>150</y>
       <w>30</w>
       <h>220</h>
     </coordinates>
@@ -239,7 +239,7 @@ fg=#003366
     <id>Text</id>
     <coordinates>
       <x>220</x>
-      <y>470</y>
+      <y>480</y>
       <w>100</w>
       <h>70</h>
     </coordinates>
@@ -252,7 +252,7 @@ style=wordwrap
     <type>CustomElementImpl</type>
     <coordinates>
       <x>220</x>
-      <y>110</y>
+      <y>120</y>
       <w>141</w>
       <h>41</h>
     </coordinates>
@@ -423,7 +423,7 @@ catch(Exception e)
     <type>CustomElementImpl</type>
     <coordinates>
       <x>220</x>
-      <y>170</y>
+      <y>180</y>
       <w>101</w>
       <h>31</h>
     </coordinates>
@@ -645,6 +645,584 @@ try
 
         y += printLeft("",y);
         com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(fsize);
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>60</x>
+      <y>70</y>
+      <w>151</w>
+      <h>41</h>
+    </coordinates>
+    <panel_attributes>// Holds the direction of the arrow, ltr for -&gt;,
+// or, rtl for &lt;-
+dir=ltr
+//dir=rtl
+
+fontsize=13
+
+// Write your own prefix.
+//prefix=2.0
+
+/*Hello* World!/
+/Automatic _*numerator*_/
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+
+try
+{
+    String tag = getSetting("dir");
+
+    if(tag==null)
+    {   // Go to default.
+        tag = "ltr";
+    }
+
+    setName(tag);
+
+    int y = textHeight();
+    double min = 0.0;
+
+    if(tag.equals("ltr"))
+    {
+        drawLine(0,y+2,width-12,y+2);
+        Polygon poly = new Polygon();
+        poly.addPoint(width-12,y-4);
+        poly.addPoint(width,y+2);
+        poly.addPoint(width-12,y+8);
+        drawPolygon(poly);
+    }
+    else
+    {
+        drawLine(0,y+2,width,y+2);
+        drawLine(0,y+2,12,y-4);
+        drawLine(0,y+2,12,y+8);
+    }
+
+    Point p = getLocationOnScreen();
+    String sp = p.getY()+"_"+p.getX();
+    String key = ""+Objects.hash(this);
+
+    Map&lt;String,String&gt; map = (Map&lt;String,String&gt;)System.getProperties().get("arrows_map");
+    Map&lt;String,javax.swing.JComponent&gt; status = (Map&lt;String,javax.swing.JComponent&gt;)System.getProperties().get("status_map");
+
+    if(map==null)
+    {
+        map = new java.util.concurrent.ConcurrentHashMap();
+        status = new java.util.concurrent.ConcurrentHashMap();
+        System.getProperties().put("arrows_map",map);
+        System.getProperties().put("status_map",status);
+    }
+
+    String prefix = "";
+    double xcounter = 0;
+    double ycounter = 0;
+
+    map.put(key,sp);
+    status.put(key,this);
+
+    Map&lt;String,String&gt; temp = new HashMap();
+
+    for(Map.Entry&lt;String,String&gt; entry: map.entrySet())
+    {
+        String k = entry.getKey();
+        String point = map.get(k);
+        temp.put(point,k);
+    }
+
+    Map&lt;String,String&gt; treeMap = new TreeMap&lt;String,String&gt;();
+    treeMap.putAll(temp);
+
+    for(Map.Entry&lt;String,String&gt; entry : treeMap.entrySet())
+    {
+        String k = entry.getValue();
+
+        javax.swing.JComponent comp = status.get(k);
+
+        if(comp==null || comp.getParent()==null || !comp.isVisible())
+        {
+            continue;
+        }
+
+        String point = entry.getKey();
+        String sx = point.substring(point.indexOf('_')+1);
+        double d = Double.parseDouble(sx);
+
+        String ctag = comp.getName();
+
+        if(ctag==null)
+        {   // That shouldn't happen.
+            ctag = "ltr";
+        }
+
+        if(ctag.equals("ltr"))
+        {
+            if(d&gt;min &amp;&amp; min==0.0)
+            {	// First time.
+                xcounter++;
+                min = d;
+            }
+            else if(d&gt;=min-2 &amp;&amp; d&lt;=min+2)
+            {
+                xcounter++;
+                ycounter = 0;
+            }
+            else if(d&gt;min+2)
+            {
+                ycounter++;
+            }
+        }
+        else
+        {
+            if(d&gt;min &amp;&amp; min==0.0)
+            {	// First time.
+                xcounter++;
+                ycounter++;
+                min = d;
+            }
+            else if(d&gt;min+2)
+            {
+                ycounter+=1;
+            }
+        }
+
+        if(k.equals(key))
+        {
+            prefix = ""+(int)xcounter+'.'+(int)ycounter;
+        }
+    }
+
+    String manuelPrefix = getSetting("prefix");
+    String fs = getSetting("fontsize");
+
+    if(fs!=null)
+    {
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(Double.parseDouble(fs));
+    }
+
+    if(manuelPrefix!=null)
+    {
+        prefix = manuelPrefix;
+    }
+
+    boolean first = true;
+
+    for(String textline : textlines)
+    {
+        char c1;
+        boolean gbflag = false;
+        boolean giflag = false;
+        boolean guflag = false;
+
+        if(textline.startsWith("prefix=") || textline.startsWith("fontsize=") || textline.startsWith("dir="))
+        {
+            continue;
+        }
+
+        while(!textline.isEmpty() &amp;&amp; ((c1=textline.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; textline.charAt(textline.length()-1)==c1 &amp;&amp; ((textline.length() - textline.replace(c1+"","").length())==2))
+        {   // Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+            textline = textline.substring(1,textline.length()-1);
+
+            switch(c1)
+            {
+                case '*':
+                {
+                    gbflag = true;
+
+                    break;
+                }
+                case '/':
+                {
+                    giflag = true;
+
+                    break;
+                }
+                case '_':
+                {
+                    guflag = true;
+
+                    break;
+                }
+            }
+        }
+
+        int x = (width-textWidth(first ? prefix+"  "+textline : textline,true))/2;
+
+        if(first)
+        {
+            if(!prefix.isEmpty())
+            {
+                x+=textWidth(prefix+"  ",true);
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,"/*"+prefix+"*/",(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+                x+=5;
+            }
+
+            first = false;
+        }
+        else
+        {
+            y+=textHeight();
+        }
+
+        String[] subs = textline.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+
+            if(lbflag || gbflag)
+            {
+                x+=(word.length()/3);
+            }
+
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>220</x>
+      <y>70</y>
+      <w>161</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>// Holds the direction of the arrow, ltr for -&gt;,
+// or, rtl for &lt;-
+dir=rtl
+//dir=ltr
+
+fontsize=13
+
+// Write your own prefix.
+//prefix=2.0
+
+/*Hello* World!/
+/Automatic _*numerator*_/
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+
+try
+{
+    String tag = getSetting("dir");
+
+    if(tag==null)
+    {   // Go to default.
+        tag = "ltr";
+    }
+
+    setName(tag);
+
+    int y = textHeight();
+    double min = 0.0;
+
+    if(tag.equals("ltr"))
+    {
+        drawLine(0,y+2,width-12,y+2);
+        Polygon poly = new Polygon();
+        poly.addPoint(width-12,y-4);
+        poly.addPoint(width,y+2);
+        poly.addPoint(width-12,y+8);
+        drawPolygon(poly);
+    }
+    else
+    {
+        drawLine(0,y+2,width,y+2);
+        drawLine(0,y+2,12,y-4);
+        drawLine(0,y+2,12,y+8);
+    }
+
+    Point p = getLocationOnScreen();
+    String sp = p.getY()+"_"+p.getX();
+    String key = ""+Objects.hash(this);
+
+    Map&lt;String,String&gt; map = (Map&lt;String,String&gt;)System.getProperties().get("arrows_map");
+    Map&lt;String,javax.swing.JComponent&gt; status = (Map&lt;String,javax.swing.JComponent&gt;)System.getProperties().get("status_map");
+
+    if(map==null)
+    {
+        map = new java.util.concurrent.ConcurrentHashMap();
+        status = new java.util.concurrent.ConcurrentHashMap();
+        System.getProperties().put("arrows_map",map);
+        System.getProperties().put("status_map",status);
+    }
+
+    String prefix = "";
+    double xcounter = 0;
+    double ycounter = 0;
+
+    map.put(key,sp);
+    status.put(key,this);
+
+    Map&lt;String,String&gt; temp = new HashMap();
+
+    for(Map.Entry&lt;String,String&gt; entry: map.entrySet())
+    {
+        String k = entry.getKey();
+        String point = map.get(k);
+        temp.put(point,k);
+    }
+
+    Map&lt;String,String&gt; treeMap = new TreeMap&lt;String,String&gt;();
+    treeMap.putAll(temp);
+
+    for(Map.Entry&lt;String,String&gt; entry : treeMap.entrySet())
+    {
+        String k = entry.getValue();
+
+        javax.swing.JComponent comp = status.get(k);
+
+        if(comp==null || comp.getParent()==null || !comp.isVisible())
+        {
+            continue;
+        }
+
+        String point = entry.getKey();
+        String sx = point.substring(point.indexOf('_')+1);
+        double d = Double.parseDouble(sx);
+
+        String ctag = comp.getName();
+
+        if(ctag==null)
+        {   // That shouldn't happen.
+            ctag = "ltr";
+        }
+
+        if(ctag.equals("ltr"))
+        {
+            if(d&gt;min &amp;&amp; min==0.0)
+            {	// First time.
+                xcounter++;
+                min = d;
+            }
+            else if(d&gt;=min-2 &amp;&amp; d&lt;=min+2)
+            {
+                xcounter++;
+                ycounter = 0;
+            }
+            else if(d&gt;min+2)
+            {
+                ycounter++;
+            }
+        }
+        else
+        {
+            if(d&gt;min &amp;&amp; min==0.0)
+            {	// First time.
+                xcounter++;
+                ycounter++;
+                min = d;
+            }
+            else if(d&gt;min+2)
+            {
+                ycounter+=1;
+            }
+        }
+
+        if(k.equals(key))
+        {
+            prefix = ""+(int)xcounter+'.'+(int)ycounter;
+        }
+    }
+
+    String manuelPrefix = getSetting("prefix");
+    String fs = getSetting("fontsize");
+
+    if(fs!=null)
+    {
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(Double.parseDouble(fs));
+    }
+
+    if(manuelPrefix!=null)
+    {
+        prefix = manuelPrefix;
+    }
+
+    boolean first = true;
+
+    for(String textline : textlines)
+    {
+        char c1;
+        boolean gbflag = false;
+        boolean giflag = false;
+        boolean guflag = false;
+
+        if(textline.startsWith("prefix=") || textline.startsWith("fontsize=") || textline.startsWith("dir="))
+        {
+            continue;
+        }
+
+        while(!textline.isEmpty() &amp;&amp; ((c1=textline.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; textline.charAt(textline.length()-1)==c1 &amp;&amp; ((textline.length() - textline.replace(c1+"","").length())==2))
+        {   // Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+            textline = textline.substring(1,textline.length()-1);
+
+            switch(c1)
+            {
+                case '*':
+                {
+                    gbflag = true;
+
+                    break;
+                }
+                case '/':
+                {
+                    giflag = true;
+
+                    break;
+                }
+                case '_':
+                {
+                    guflag = true;
+
+                    break;
+                }
+            }
+        }
+
+        int x = (width-textWidth(first ? prefix+"  "+textline : textline,true))/2;
+
+        if(first)
+        {
+            if(!prefix.isEmpty())
+            {
+                x+=textWidth(prefix+"  ",true);
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,"/*"+prefix+"*/",(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+                x+=5;
+            }
+
+            first = false;
+        }
+        else
+        {
+            y+=textHeight();
+        }
+
+        String[] subs = textline.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+
+            if(lbflag || gbflag)
+            {
+                x+=(word.length()/3);
+            }
+
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
     }
 }
 catch(Exception e)
