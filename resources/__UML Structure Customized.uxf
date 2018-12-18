@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>10</x>
+      <y>250</y>
+      <w>181</w>
+      <h>101</h>
+    </coordinates>
+    <panel_attributes>// That takes effect globaly.
+// That must come first. 
+gradient=btt
+gradient=true
+// Those settings are at the sentence level.
+halign=center
+fontsize=20
+/Hello, *World!*/
+*_Enjoy_ /UMLet!/*
+fontsize=10
+*/You're/*
+*He's the man*
+fontsize=17
+halign=center
+She's
+
+bg=#009900
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+try
+{
+    int y = textHeight();
+
+    // (1) Try to find global parameters such as, font size, etc.
+    double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
+    boolean fflag = false;
+    boolean calign = false;
+    boolean ltr = true;
+    boolean ttb = true;
+    boolean frame = true;
+    int newFSize = 14;
+
+    for(String textline : textlines)
+    {
+       String substring = textline;
+       int x = 10;
+       char c1;
+       boolean gbflag = false;
+       boolean giflag = false;
+       boolean guflag = false;
+
+       if(substring.startsWith("fontsize="))
+       {
+            substring = substring.substring("fontsize=".length(),substring.length());
+
+            try
+            {
+                newFSize = Integer.parseInt(substring.trim());
+            }
+            catch(NumberFormatException ex)
+            {
+                newFSize = (int)fsize;
+            }
+
+            com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)newFSize);
+            fflag = true;
+
+            continue;
+       }
+       else if(substring.startsWith("halign=center"))
+       {
+           calign = true;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=rtl"))
+       {
+           ltr = false;
+                   
+           continue;
+       }
+       else if(substring.startsWith("gradient=btt"))
+       {
+           ttb = false;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=true"))
+       {    // Takes effect, globaly.
+            int x1 =0, x2 = width, y1 = 0,y2 = height;
+            
+            if(!ltr)
+            {
+                x1 = width;
+                x2 = 0;
+            }
+            
+            if(!ttb)
+            {
+            	 x1 = width;
+            	 x2 = width;
+                y1 = height;
+                y2 = 0;
+            }
+
+            int xstart = frame ? 1 : 0;
+				int ystart = frame ? 1 : 0;
+            int twidth = frame ? width-1 : width;
+            int theight = frame ? height-1 : height;
+            
+            GradientPaint blueToBlack = new GradientPaint(x1,y1,bgColor.brighter(),x2,y2,bgColor);
+            g2.draw(new Rectangle(0,0,width,height));
+            g2.setPaint(blueToBlack);
+            g2.fill(new java.awt.geom.Rectangle2D.Double(xstart,ystart,twidth,theight));
+            g2.setColor(fgColor);
+
+            continue;
+       }
+       else if(substring.startsWith("gradient=false"))
+       {
+       		drawRectangle(0,0,width,height);
+
+       		continue;
+       }
+       else if(substring.startsWith("frame=false"))
+       {
+       		frame = false;
+       }
+
+       if(fflag)
+       {    // The next sentence after Bumping into changing of a font size. 
+            y+=newFSize-fsize;
+            fflag = false;
+       }
+       
+       if(calign)
+       {	  // The next sentence after Bumping into align setting. 
+           int w = textWidth(substring,true);
+           x = (width-w)/2;
+           calign = false;
+       }
+
+        while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
+        {   // (2) Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+           substring = substring.substring(1,substring.length()-1);
+
+           switch(c1)
+           {
+               case '*':
+               {
+                    gbflag = true;
+
+                    break;
+               }
+               case '/':
+               {
+                    giflag = true;
+
+                    break;
+               }
+               case '_':
+               {
+                   guflag = true;
+
+                   break;
+               }
+           }
+        }
+
+        String[] subs = substring.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+            
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
+
+        y += printLeft("",y);
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(fsize);
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>10</x>
+      <y>10</y>
+      <w>201</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>// That takes effect globaly.
+frame=true
+// That must come first. 
+gradient=btt
+gradient=true
+// Those settings are at the sentence level.
+halign=center
+fontsize=20
+/Hello, *World!*/
+*_Enjoy_ /UMLet!/*
+fontsize=10
+*/You're/*
+*He's the man*
+fontsize=17
+halign=center
+She's
+bg=#009900
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+try
+{
+    int y = textHeight()+12;
+
+    // (1) Try to find global parameters such as, font size, etc.
+    double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
+    boolean fflag = false;
+    boolean calign = false;
+    boolean ltr = true;
+    boolean ttb = true;
+    boolean frame = true;
+    int newFSize = 14;
+
+    for(String textline : textlines)
+    {
+       String substring = textline;
+       int x = 10;
+       char c1;
+       boolean gbflag = false;
+       boolean giflag = false;
+       boolean guflag = false;
+
+       if(substring.startsWith("fontsize="))
+       {
+            substring = substring.substring("fontsize=".length(),substring.length());
+
+            try
+            {
+                newFSize = Integer.parseInt(substring.trim());
+            }
+            catch(NumberFormatException ex)
+            {
+                newFSize = (int)fsize;
+            }
+
+            com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)newFSize);
+            fflag = true;
+
+            continue;
+       }
+       else if(substring.startsWith("halign=center"))
+       {
+           calign = true;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=rtl"))
+       {
+           ltr = false;
+                   
+           continue;
+       }
+       else if(substring.startsWith("gradient=btt"))
+       {
+           ttb = false;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=true"))
+       {    // Takes effect, globaly.
+            int x1 =0, x2 = width, y1 = 0,y2 = height;
+            
+            if(!ltr)
+            {
+                x1 = width;
+                x2 = 0;
+            }
+            
+            if(!ttb)
+            {
+            	 x1 = width;
+            	 x2 = width;
+                y1 = height;
+                y2 = 0;
+            }
+
+            int xstart = frame ? 1 : 0;
+			int ystart = frame ? 9 : 8;
+         int twidth = frame ? width-9 : width-1;
+         int theight = frame ? height-9 : height-8;
+            
+         GradientPaint blueToBlack = new GradientPaint(x1,y1,bgColor.brighter(),x2,y2,bgColor);
+            
+			g2.draw(new Rectangle(0,8,width-8,height-8));
+         Polygon poly = new Polygon();
+         poly.addPoint(0,8);
+         poly.addPoint(8,0);
+         poly.addPoint(width,0);
+         poly.addPoint(width-8,8);
+         drawPolygon(poly);
+
+            Polygon poly1 = new Polygon();
+            poly1.addPoint(width-8,8);
+            poly1.addPoint(width,0);
+            poly1.addPoint(width,height-8);
+            poly1.addPoint(width-8,height);
+            drawPolygon(poly1);
+
+            g2.setPaint(blueToBlack);
+            g2.fill(new java.awt.geom.Rectangle2D.Double(xstart,ystart,twidth,theight));
+            g2.setColor(fgColor);
+
+            continue;
+       }
+       else if(substring.startsWith("gradient=false"))
+       {	
+            drawRectangle(0,8,width-8,height-8);
+            Polygon poly = new Polygon();
+            poly.addPoint(0,8);
+            poly.addPoint(8,0);
+            poly.addPoint(width,0);
+            poly.addPoint(width-8,8);
+            drawPolygon(poly);
+  
+            Polygon poly1 = new Polygon();
+            poly1.addPoint(width-8,8);
+            poly1.addPoint(width,0);
+            poly1.addPoint(width,height-8);
+            poly1.addPoint(width-8,height);
+            drawPolygon(poly1);
+
+       		continue;
+       }
+       else if(substring.startsWith("frame=false"))
+       {
+       		frame = false;
+       		
+       		continue;
+       }
+       else if(substring.startsWith("frame=true"))
+       {
+       	continue;
+       }
+
+       if(fflag)
+       {    // The next sentence after Bumping into changing of a font size. 
+            y+=newFSize-fsize;
+            fflag = false;
+       }
+       
+       if(calign)
+       {	  // The next sentence after Bumping into align setting. 
+           int w = textWidth(substring,true);
+           x = (width-w)/2;
+           calign = false;
+       }
+
+        while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
+        {   // (2) Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+           substring = substring.substring(1,substring.length()-1);
+
+           switch(c1)
+           {
+               case '*':
+               {
+                    gbflag = true;
+
+                    break;
+               }
+               case '/':
+               {
+                    giflag = true;
+
+                    break;
+               }
+               case '_':
+               {
+                   guflag = true;
+
+                   break;
+               }
+           }
+        }
+
+        String[] subs = substring.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+            
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
+
+        y += printLeft("",y);
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(fsize);
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>220</x>
+      <y>10</y>
+      <w>201</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>// That takes effect globaly.
+frame=true
+// That must come first. 
+gradient=btt
+gradient=true
+// Those settings are at the sentence level.
+halign=center
+fontsize=20
+/Hello, *World!*/
+*_Enjoy_ /UMLet!/*
+fontsize=10
+*/You're/*
+*He's the man*
+fontsize=17
+halign=center
+She's
+bg=#999900
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+try
+{
+    int y = textHeight()+12;
+
+    // (1) Try to find global parameters such as, font size, etc.
+    double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
+    boolean fflag = false;
+    boolean calign = false;
+    boolean ltr = true;
+    boolean ttb = true;
+    boolean frame = true;
+    int newFSize = 14;
+
+    for(String textline : textlines)
+    {
+       String substring = textline;
+       int x = 10;
+       char c1;
+       boolean gbflag = false;
+       boolean giflag = false;
+       boolean guflag = false;
+
+       if(substring.startsWith("fontsize="))
+       {
+            substring = substring.substring("fontsize=".length(),substring.length());
+
+            try
+            {
+                newFSize = Integer.parseInt(substring.trim());
+            }
+            catch(NumberFormatException ex)
+            {
+                newFSize = (int)fsize;
+            }
+
+            com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)newFSize);
+            fflag = true;
+
+            continue;
+       }
+       else if(substring.startsWith("halign=center"))
+       {
+           calign = true;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=rtl"))
+       {
+           ltr = false;
+                   
+           continue;
+       }
+       else if(substring.startsWith("gradient=btt"))
+       {
+           ttb = false;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=true"))
+       {    // Takes effect, globaly.
+            int x1 =0, x2 = width, y1 = 0,y2 = height;
+            
+            if(!ltr)
+            {
+                x1 = width;
+                x2 = 0;
+            }
+            
+            if(!ttb)
+            {
+            	 x1 = width;
+            	 x2 = width;
+                y1 = height;
+                y2 = 0;
+            }
+
+         int xstart = frame ? 1 : 0;
+			int ystart = frame ? 9 : 8;
+         int twidth = frame ? width-9 : width-1;
+         int theight = frame ? height-9 : height-8;
+            
+         GradientPaint blueToBlack = new GradientPaint(x1,y1,bgColor.brighter(),x2,y2,bgColor);
+            
+			g2.draw(new Rectangle(0,8,width-8,height-8));
+         Polygon poly = new Polygon();
+         poly.addPoint(0,8);
+         poly.addPoint(8,0);
+         poly.addPoint(width,0);
+         poly.addPoint(width-8,8);
+         drawPolygon(poly);
+
+            Polygon poly1 = new Polygon();
+            poly1.addPoint(width-8,8);
+            poly1.addPoint(width,0);
+            poly1.addPoint(width,height-8);
+            poly1.addPoint(width-8,height);
+            drawPolygon(poly1);
+
+            g2.setPaint(blueToBlack);
+            g2.fill(new java.awt.geom.Rectangle2D.Double(xstart,ystart,twidth,theight));
+            g2.setColor(fgColor);
+
+            continue;
+       }
+       else if(substring.startsWith("gradient=false"))
+       {	
+            drawRectangle(0,8,width-8,height-8);
+            Polygon poly = new Polygon();
+            poly.addPoint(0,8);
+            poly.addPoint(8,0);
+            poly.addPoint(width,0);
+            poly.addPoint(width-8,8);
+            drawPolygon(poly);
+  
+            Polygon poly1 = new Polygon();
+            poly1.addPoint(width-8,8);
+            poly1.addPoint(width,0);
+            poly1.addPoint(width,height-8);
+            poly1.addPoint(width-8,height);
+            drawPolygon(poly1);
+
+       		continue;
+       }
+       else if(substring.startsWith("frame=false"))
+       {
+       		frame = false;
+       		
+       		continue;
+       }
+       else if(substring.startsWith("frame=true"))
+       {
+       	continue;
+       }
+
+       if(fflag)
+       {    // The next sentence after Bumping into changing of a font size. 
+            y+=newFSize-fsize;
+            fflag = false;
+       }
+       
+       if(calign)
+       {	  // The next sentence after Bumping into align setting. 
+           int w = textWidth(substring,true);
+           x = (width-w)/2;
+           calign = false;
+       }
+
+        while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
+        {   // (2) Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+           substring = substring.substring(1,substring.length()-1);
+
+           switch(c1)
+           {
+               case '*':
+               {
+                    gbflag = true;
+
+                    break;
+               }
+               case '/':
+               {
+                    giflag = true;
+
+                    break;
+               }
+               case '_':
+               {
+                   guflag = true;
+
+                   break;
+               }
+           }
+        }
+
+        String[] subs = substring.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+            
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
+
+        y += printLeft("",y);
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(fsize);
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>10</x>
+      <y>130</y>
+      <w>201</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>// That takes effect globaly.
+frame=true
+// That must come first. 
+gradient=btt
+gradient=true
+// Those settings are at the sentence level.
+halign=center
+fontsize=20
+/Hello, *World!*/
+*_Enjoy_ /UMLet!/*
+fontsize=10
+*/You're/*
+*He's the man*
+fontsize=17
+halign=center
+She's
+bg=#009900
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+try
+{
+    int y = textHeight()+12;
+
+    // (1) Try to find global parameters such as, font size, etc.
+    double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
+    boolean fflag = false;
+    boolean calign = false;
+    boolean ltr = true;
+    boolean ttb = true;
+    boolean frame = true;
+    int newFSize = 14;
+
+    for(String textline : textlines)
+    {
+       String substring = textline;
+       int x = 10;
+       char c1;
+       boolean gbflag = false;
+       boolean giflag = false;
+       boolean guflag = false;
+
+       if(substring.startsWith("fontsize="))
+       {
+            substring = substring.substring("fontsize=".length(),substring.length());
+
+            try
+            {
+                newFSize = Integer.parseInt(substring.trim());
+            }
+            catch(NumberFormatException ex)
+            {
+                newFSize = (int)fsize;
+            }
+
+            com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)newFSize);
+            fflag = true;
+
+            continue;
+       }
+       else if(substring.startsWith("halign=center"))
+       {
+           calign = true;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=rtl"))
+       {
+           ltr = false;
+                   
+           continue;
+       }
+       else if(substring.startsWith("gradient=btt"))
+       {
+           ttb = false;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=true"))
+       {    // Takes effect, globaly.
+            int x1 =0, x2 = width, y1 = 0,y2 = height;
+            
+            if(!ltr)
+            {
+                x1 = width;
+                x2 = 0;
+            }
+            
+            if(!ttb)
+            {
+            	 x1 = width;
+            	 x2 = width;
+                y1 = height;
+                y2 = 0;
+            }
+
+            int xstart = frame ? 1 : 0;
+			int ystart = frame ? 9 : 8;
+         int twidth = frame ? width-9 : width-1;
+         int theight = frame ? height-9 : height-8;
+            
+         GradientPaint blueToBlack = new GradientPaint(x1,y1,bgColor.brighter(),x2,y2,bgColor);
+            
+			g2.draw(new Rectangle(0,8,width-8,height-8));
+         Polygon poly = new Polygon();
+         poly.addPoint(0,8);
+         poly.addPoint(8,0);
+         poly.addPoint(width,0);
+         poly.addPoint(width-8,8);
+         drawPolygon(poly);
+
+         Polygon poly1 = new Polygon();
+         poly1.addPoint(width-8,8);
+         poly1.addPoint(width,0);
+         poly1.addPoint(width,height-8);
+         poly1.addPoint(width-8,height);
+         drawPolygon(poly1);
+
+         Polygon poly2 = new Polygon();
+         poly2.addPoint(width-28,16);
+         poly2.addPoint(width-18,16);
+         poly2.addPoint(width-12,22);
+         poly2.addPoint(width-12,36);
+         poly2.addPoint(width-28,36);
+         drawPolygon(poly2);
+
+         Polygon poly3 = new Polygon();
+         poly3.addPoint(width-18,16);
+         poly3.addPoint(width-18,22);
+         poly3.addPoint(width-12,22);
+         drawPolygon(poly3);
+
+            g2.setPaint(blueToBlack);
+            g2.fill(new java.awt.geom.Rectangle2D.Double(xstart,ystart,twidth,theight));
+            g2.setColor(fgColor);
+
+            continue;
+       }
+       else if(substring.startsWith("gradient=false"))
+       {	
+            g2.draw(new Rectangle(0,8,width-8,height-8));
+         Polygon poly = new Polygon();
+         poly.addPoint(0,8);
+         poly.addPoint(8,0);
+         poly.addPoint(width,0);
+         poly.addPoint(width-8,8);
+         drawPolygon(poly);
+
+         Polygon poly1 = new Polygon();
+         poly1.addPoint(width-8,8);
+         poly1.addPoint(width,0);
+         poly1.addPoint(width,height-8);
+         poly1.addPoint(width-8,height);
+         drawPolygon(poly1);
+
+         Polygon poly2 = new Polygon();
+         poly2.addPoint(width-28,16);
+         poly2.addPoint(width-18,16);
+         poly2.addPoint(width-12,22);
+         poly2.addPoint(width-12,36);
+         poly2.addPoint(width-28,36);
+         drawPolygon(poly2);
+
+         Polygon poly3 = new Polygon();
+         poly3.addPoint(width-18,16);
+         poly3.addPoint(width-18,22);
+         poly3.addPoint(width-12,22);
+         drawPolygon(poly3);
+
+       		continue;
+       }
+       else if(substring.startsWith("frame=false"))
+       {
+       		frame = false;
+       		
+       		continue;
+       }
+       else if(substring.startsWith("frame=true"))
+       {
+       	continue;
+       }
+
+       if(fflag)
+       {    // The next sentence after Bumping into changing of a font size. 
+            y+=newFSize-fsize;
+            fflag = false;
+       }
+       
+       if(calign)
+       {	  // The next sentence after Bumping into align setting. 
+           int w = textWidth(substring,true);
+           x = (width-w)/2;
+           calign = false;
+       }
+
+        while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
+        {   // (2) Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+           substring = substring.substring(1,substring.length()-1);
+
+           switch(c1)
+           {
+               case '*':
+               {
+                    gbflag = true;
+
+                    break;
+               }
+               case '/':
+               {
+                    giflag = true;
+
+                    break;
+               }
+               case '_':
+               {
+                   guflag = true;
+
+                   break;
+               }
+           }
+        }
+
+        String[] subs = substring.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+            
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
+
+        y += printLeft("",y);
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(fsize);
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>220</x>
+      <y>130</y>
+      <w>201</w>
+      <h>111</h>
+    </coordinates>
+    <panel_attributes>// That takes effect globaly.
+frame=true
+// That must come first. 
+gradient=btt
+gradient=true
+// Those settings are at the sentence level.
+halign=center
+fontsize=20
+/Hello, *World!*/
+*_Enjoy_ /UMLet!/*
+fontsize=10
+*/You're/*
+*He's the man*
+fontsize=17
+halign=center
+She's
+bg=#999900
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+try
+{
+    int y = textHeight()+12;
+
+    // (1) Try to find global parameters such as, font size, etc.
+    double fsize = com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().getFontSize();
+    boolean fflag = false;
+    boolean calign = false;
+    boolean ltr = true;
+    boolean ttb = true;
+    boolean frame = true;
+    int newFSize = 14;
+
+    for(String textline : textlines)
+    {
+       String substring = textline;
+       int x = 10;
+       char c1;
+       boolean gbflag = false;
+       boolean giflag = false;
+       boolean guflag = false;
+
+       if(substring.startsWith("fontsize="))
+       {
+            substring = substring.substring("fontsize=".length(),substring.length());
+
+            try
+            {
+                newFSize = Integer.parseInt(substring.trim());
+            }
+            catch(NumberFormatException ex)
+            {
+                newFSize = (int)fsize;
+            }
+
+            com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize((double)newFSize);
+            fflag = true;
+
+            continue;
+       }
+       else if(substring.startsWith("halign=center"))
+       {
+           calign = true;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=rtl"))
+       {
+           ltr = false;
+                   
+           continue;
+       }
+       else if(substring.startsWith("gradient=btt"))
+       {
+           ttb = false;
+
+           continue;
+       }
+       else if(substring.startsWith("gradient=true"))
+       {    // Takes effect, globaly.
+            int x1 =0, x2 = width, y1 = 0,y2 = height;
+            
+            if(!ltr)
+            {
+                x1 = width;
+                x2 = 0;
+            }
+            
+            if(!ttb)
+            {
+            	 x1 = width;
+            	 x2 = width;
+                y1 = height;
+                y2 = 0;
+            }
+
+            int xstart = frame ? 1 : 0;
+			int ystart = frame ? 9 : 8;
+         int twidth = frame ? width-9 : width-1;
+         int theight = frame ? height-9 : height-8;
+            
+         GradientPaint blueToBlack = new GradientPaint(x1,y1,bgColor.brighter(),x2,y2,bgColor);
+            
+			g2.draw(new Rectangle(0,8,width-8,height-8));
+         Polygon poly = new Polygon();
+         poly.addPoint(0,8);
+         poly.addPoint(8,0);
+         poly.addPoint(width,0);
+         poly.addPoint(width-8,8);
+         drawPolygon(poly);
+
+         Polygon poly1 = new Polygon();
+         poly1.addPoint(width-8,8);
+         poly1.addPoint(width,0);
+         poly1.addPoint(width,height-8);
+         poly1.addPoint(width-8,height);
+         drawPolygon(poly1);
+
+         drawLine(width-26,16,width-14,16);
+         drawLine(width-12,16,width-12,36);
+         drawLine(width-12,36,width-26,36);
+         drawLine(width-26,36,width-26,33);
+         drawLine(width-26,26,width-26,28);
+         drawLine(width-26,20,width-26,16);
+
+         Polygon poly3 = new Polygon();
+         poly3.addPoint(width-30,28);
+         poly3.addPoint(width-22,28);
+         poly3.addPoint(width-22,33);
+         poly3.addPoint(width-30,33);
+         drawPolygon(poly3);
+
+         Polygon poly4 = new Polygon();
+         poly4.addPoint(width-30,20);
+         poly4.addPoint(width-22,20);
+         poly4.addPoint(width-22,25);
+         poly4.addPoint(width-30,25);
+         drawPolygon(poly4);
+         
+            g2.setPaint(blueToBlack);
+            g2.fill(new java.awt.geom.Rectangle2D.Double(xstart,ystart,twidth,theight));
+            g2.setColor(fgColor);
+
+            continue;
+       }
+       else if(substring.startsWith("gradient=false"))
+       {	
+            g2.draw(new Rectangle(0,12,width-12,height-12));
+         Polygon poly = new Polygon();
+         poly.addPoint(0,12);
+         poly.addPoint(12,0);
+         poly.addPoint(width,0);
+         poly.addPoint(width-12,12);
+         drawPolygon(poly);
+
+         Polygon poly1 = new Polygon();
+         poly1.addPoint(width-12,12);
+         poly1.addPoint(width,0);
+         poly1.addPoint(width,height-12);
+         poly1.addPoint(width-12,height);
+         drawPolygon(poly1);
+
+         drawLine(width-30,20,width-16,20);
+         drawLine(width-16,20,width-16,40);
+         drawLine(width-16,40,width-30,40);
+         drawLine(width-30,40,width-30,37);
+         drawLine(width-30,32,width-30,30);
+         drawLine(width-30,24,width-30,20);
+
+         Polygon poly3 = new Polygon();
+         poly3.addPoint(width-34,32);
+         poly3.addPoint(width-26,32);
+         poly3.addPoint(width-26,37);
+         poly3.addPoint(width-34,37);
+         drawPolygon(poly3);
+
+         Polygon poly4 = new Polygon();
+         poly4.addPoint(width-34,24);
+         poly4.addPoint(width-26,24);
+         poly4.addPoint(width-26,29);
+         poly4.addPoint(width-34,29);
+         drawPolygon(poly4);
+
+       		continue;
+       }
+       else if(substring.startsWith("frame=false"))
+       {
+       		frame = false;
+       		
+       		continue;
+       }
+       else if(substring.startsWith("frame=true"))
+       {
+       	continue;
+       }
+
+       if(fflag)
+       {    // The next sentence after Bumping into changing of a font size. 
+            y+=newFSize-fsize;
+            fflag = false;
+       }
+       
+       if(calign)
+       {	  // The next sentence after Bumping into align setting. 
+           int w = textWidth(substring,true);
+           x = (width-w)/2;
+           calign = false;
+       }
+
+        while(!substring.isEmpty() &amp;&amp; ((c1=substring.charAt(0))=='*' || c1=='/' || c1=='_') &amp;&amp; substring.charAt(substring.length()-1)==c1 &amp;&amp; ((substring.length() - substring.replace(c1+"","").length())==2))
+        {   // (2) Find all global parameters of a line, such as, bold, italic, and an underline.
+            // That will break if one of the word contains one of '*'; or '/'; or '_'.
+           substring = substring.substring(1,substring.length()-1);
+
+           switch(c1)
+           {
+               case '*':
+               {
+                    gbflag = true;
+
+                    break;
+               }
+               case '/':
+               {
+                    giflag = true;
+
+                    break;
+               }
+               case '_':
+               {
+                   guflag = true;
+
+                   break;
+               }
+           }
+        }
+
+        String[] subs = substring.split(" ");
+
+        for(int i=0;i&lt;subs.length;i++)    
+        {
+            String sub = subs[i];
+
+            char lc1;
+            boolean lbflag = false;
+            boolean liflag = false;
+            boolean luflag = false;
+
+            while(!sub.isEmpty() &amp;&amp; ((lc1=sub.charAt(0))=='*' || lc1=='/' || lc1=='_') &amp;&amp; sub.charAt(sub.length()-1)==lc1)
+            {
+                sub = sub.substring(1,sub.length()-1);
+
+                switch(lc1)
+                {
+                    case '*':
+                    {
+                        lbflag = true;
+
+                        break;
+                    }
+                    case '/':
+                    {
+                        liflag = true;
+
+                        break;
+                    }
+                    case '_':
+                    {
+                        luflag = true;
+
+                        break;
+                    }
+                }
+            }
+
+            String word = lbflag || gbflag ? '*'+sub+'*' : sub;
+            word = liflag || giflag ? '/'+word+'/' : word;
+            word = luflag || guflag ? '_'+word+'_' : word;
+
+            x += textWidth(sub,true);
+            
+            if(!sub.trim().isEmpty())
+            {   // No need to print empty words.
+                // AlignHorizontal.RIGHT, that's to workaround an internal bug.
+                com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().writeText(g2,word,(int)(x*zoom),(int)(y*zoom),com.baselet.control.enums.AlignHorizontal.RIGHT,true);
+            }
+
+            if(i&lt;subs.length-1)
+            {   // Move the cusrsor one space right.
+                x += textWidth(" ",true);
+            }           
+        }
+
+        y += printLeft("",y);
+        com.baselet.control.HandlerElementMap.getHandlerForElement(this).getFontHandler().setFontSize(fsize);
+    }
+}
+catch(Exception e)
+{}</custom_code>
+  </element>
+</diagram>
