@@ -181,8 +181,8 @@ lt=()-</panel_attributes>
   <element>
     <id>UMLInterface</id>
     <coordinates>
-      <x>40</x>
-      <y>0</y>
+      <x>130</x>
+      <y>50</y>
       <w>20</w>
       <h>70</h>
     </coordinates>
@@ -193,7 +193,7 @@ lt=()-</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>30</x>
-      <y>160</y>
+      <y>90</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -204,7 +204,7 @@ lt=()-</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>30</x>
-      <y>210</y>
+      <y>140</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -215,7 +215,7 @@ lt=()-</panel_attributes>
     <id>UMLState</id>
     <coordinates>
       <x>30</x>
-      <y>250</y>
+      <y>180</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -226,7 +226,7 @@ lt=()-</panel_attributes>
     <id>UMLSpecialState</id>
     <coordinates>
       <x>30</x>
-      <y>40</y>
+      <y>10</y>
       <w>40</w>
       <h>40</h>
     </coordinates>
@@ -236,7 +236,7 @@ lt=()-</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>110</x>
+      <x>160</x>
       <y>60</y>
       <w>20</w>
       <h>20</h>
@@ -247,8 +247,8 @@ lt=()-</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>110</x>
-      <y>90</y>
+      <x>100</x>
+      <y>60</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -258,8 +258,8 @@ lt=()-</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>40</x>
-      <y>90</y>
+      <x>70</x>
+      <y>60</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -270,7 +270,7 @@ lt=()-</panel_attributes>
     <id>UMLSpecialState</id>
     <coordinates>
       <x>40</x>
-      <y>130</y>
+      <y>60</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -281,7 +281,7 @@ lt=()-</panel_attributes>
     <id>UMLState</id>
     <coordinates>
       <x>30</x>
-      <y>300</y>
+      <y>230</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -292,7 +292,7 @@ lt=()-</panel_attributes>
     <id>UMLState</id>
     <coordinates>
       <x>20</x>
-      <y>350</y>
+      <y>280</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -404,7 +404,7 @@ lw=5.0
     <id>UMLClass</id>
     <coordinates>
       <x>90</x>
-      <y>400</y>
+      <y>330</y>
       <w>70</w>
       <h>40</h>
     </coordinates>
@@ -421,7 +421,7 @@ drawLine(width-20,6,width,14) lw=4.0</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>90</x>
-      <y>440</y>
+      <y>370</y>
       <w>70</w>
       <h>40</h>
     </coordinates>
@@ -439,7 +439,7 @@ drawLine(width-20,6,width,14) lw=3.0</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>10</x>
-      <y>400</y>
+      <y>330</y>
       <w>70</w>
       <h>40</h>
     </coordinates>
@@ -456,7 +456,7 @@ drawLine(20,6,0,14) lw=4.0</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>10</x>
-      <y>440</y>
+      <y>370</y>
       <w>70</w>
       <h>40</h>
     </coordinates>
@@ -473,8 +473,8 @@ drawLine(20,6,0,14) lw=3.0</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>480</y>
+      <x>90</x>
+      <y>450</y>
       <w>40</w>
       <h>70</h>
     </coordinates>
@@ -491,8 +491,8 @@ drawLine(24,0,32,20) lw=3.0</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>480</y>
+      <x>130</x>
+      <y>450</y>
       <w>40</w>
       <h>70</h>
     </coordinates>
@@ -509,8 +509,8 @@ drawLine(32,height-20,24,height) lw=3.0</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>10</x>
-      <y>480</y>
+      <x>0</x>
+      <y>450</y>
       <w>40</w>
       <h>70</h>
     </coordinates>
@@ -526,8 +526,8 @@ drawLine(24,0,32,20) lw=4.0</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>50</x>
-      <y>480</y>
+      <x>40</x>
+      <y>450</y>
       <w>40</w>
       <h>70</h>
     </coordinates>
@@ -538,6 +538,45 @@ drawLine(14,0,14,height) lw=4.0
 drawLine(24,0,24,height) lw=4.0
 drawLine(6,height-20,14,height) lw=4.0
 drawLine(32,height-20,24,height) lw=4.0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>410</y>
+      <w>70</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+lw=0.0
+fg=#9999ee
+customelement=
+drawLine(0,14,width,14) lw=3.0
+drawLine(0,24,width,24) lw=3.0
+drawLine(20,32,0,24) lw=3.0
+drawLine(20,6,0,14) lw=3.0
+drawLine(width-20,32,width,24) lw=3.0
+drawLine(width-20,6,width,14) lw=3.0</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>410</y>
+      <w>70</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=..
+lw=0.0
+customelement=
+drawLine(0,14,width,14) lw=4.0
+drawLine(0,24,width,24) lw=4.0
+drawLine(width-20,32,width,24) lw=4.0
+drawLine(width-20,6,width,14) lw=4.0
+drawLine(20,32,0,24) lw=4.0
+drawLine(20,6,0,14) lw=4.0</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
